@@ -133,4 +133,4 @@ dist
 
 
 node_modules/
-.parcel-cache/
+.parcel-cache/coverage

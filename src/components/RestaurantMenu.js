@@ -4,7 +4,8 @@ import useRestaurantMenu from "../utils/useRestaurantMenu";
 import RestaurantCategory from "./RestaurantCategory";
 import { useState } from "react";
 
-
+//lifting state up ------study
+//prop drilling
 
 const RestaurantMenu=()=>{
     // const [resInfo, setResInfo]=useState(null);

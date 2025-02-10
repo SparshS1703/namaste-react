@@ -8,6 +8,9 @@ import RestaurantMenu from "./components/RestaurantMenu.js";
 import About from "./components/About.js"
 import RestaurantMenu from "./components/RestaurantMenu.js";
 import UserContext from "./utils/UserContext.js";
+import {Provider} from "react-redux";
+import appStore from "./utils/appStore.js";
+import Cart from "./components/cart.js"
 
 // import Grocery from "./components/Grocery.js"
 
@@ -24,12 +27,14 @@ useEffect(()=>{
     setUserInfo(data.name)
 },[])
     return (
+        <Provider store={appStore}>
         <UserContext.Provider value={{loggedInUser:userInfo}}>
     <div className="app">
         <Header />
         <Outlet />
     </div>
     </UserContext.Provider>
+    </Provider>
     )
 };
 
@@ -56,6 +61,10 @@ const AppRouter= createBrowserRouter([
             {
                 path:"/restaurant/:resId",
                 element:<RestaurantMenu />
+            },
+            {
+                path:"/cart",
+                element:<Cart />
             }
 
         ],

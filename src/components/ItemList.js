@@ -1,6 +1,15 @@
+import { useDispatch } from "react-redux";
 import CDN_URL from "../utils/constants";
+import { addItem } from "../utils/cartSlice";
+
+
 const ItemList=({items})=>{
     console.log("items=",items);
+
+    const dispatch=useDispatch();
+    const handleAddItem=(item)=>{
+        dispatch(addItem(item))
+    }
     
     return (
         <div className="transition-all"> 
@@ -19,7 +28,8 @@ const ItemList=({items})=>{
                   
                    <div className="p-4 w-3/12">
                     <div className="absolute">
-                    <button className="p-2 mx-18 bg-white shadow-2xl rounded-xl">Add +</button>
+                    <button className="p-2 mx-18 bg-white shadow-2xl rounded-xl cursor-pointer" onClick={()=>handleAddItem(item)}>Add +</button>
+                    {cartItems.length==0 && (<h1>Cart is Empty. Add items to Cart.</h1>)}
                     </div>
                     <img src={CDN_URL+item.card.info.imageId} className="w-full rounded-2xl"></img>
                     </div>
