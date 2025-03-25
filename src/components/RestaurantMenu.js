@@ -31,12 +31,12 @@ const RestaurantMenu=()=>{
 
     const {name, cuisines, cloudinaryImageId, costForTwoMessage}=resInfo?.cards[2]?.card?.card?.info ||{};
     const {itemCards}=resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card ||{};
-    console.log(resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card ||{} );
-    console.log("hello",resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
-    console.log(itemCards);
+    // console.log(resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card ||{} );
+    // console.log("hello",resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
+    // console.log(itemCards);
 
     const categoris=resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(c=>c?.card?.card?.["@type"]=="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
-    console.log("cat",categoris);
+    // console.log("cat",categoris);
     
 
     return (resInfo==null)?<Shimmer />:
