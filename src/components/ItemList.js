@@ -4,7 +4,7 @@ import { addItem } from "../utils/cartSlice";
 
 
 const ItemList=({items})=>{
-    console.log("items=",items);
+    // console.log("items=",items);
 
     const dispatch=useDispatch();
     const handleAddItem=(item)=>{

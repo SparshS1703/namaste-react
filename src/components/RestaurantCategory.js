@@ -2,7 +2,7 @@ import { useState } from "react";
 import ItemList from "./ItemList";
 
 const RestaurantCategory=({data, showItems, setShowIndex})=>{
-    console.log(data);
+    // console.log(data);
   
 
     // const [showItems,setShowItems]=useState(false);  ------if this is present then each item has its own state therefore it is uncontrolled component else controlled component if controolled by parent component   /// interview  

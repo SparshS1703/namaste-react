@@ -18724,7 +18724,7 @@ const Header = ()=>{
     const [btnName, setBtnName] = (0, _react.useState)("Login");
     const data = (0, _react.useContext)((0, _userContextDefault.default));
     const cartItems = (0, _reactRedux.useSelector)((store)=>store.cart.items);
-    console.log(cartItems);
+    // console.log(cartItems);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "flex justify-between bg-pink-100 shadow-lg",
         children: [
@@ -26608,7 +26608,7 @@ const Body = ()=>{
         //   Dynamically find the object containing restaurants
         const restaurantCard = json?.data?.cards.find((card)=>card?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         const restaurants = restaurantCard?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
-        console.log("Fetched Restaurants:", restaurants);
+        // console.log("Fetched Restaurants:", restaurants);
         setLisOfRes(restaurants);
         setFilteredRes(restaurants);
     };
@@ -26618,13 +26618,13 @@ const Body = ()=>{
         children: "Looks like youre offline!! Please check your internet Connection"
     }, void 0, false, {
         fileName: "src/components/body.js",
-        lineNumber: 45,
-        columnNumber: 16
+        lineNumber: 46,
+        columnNumber: 7
     }, undefined);
     if (listOfRes == undefined || listOfRes.length == 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/body.js",
-        lineNumber: 49,
-        columnNumber: 16
+        lineNumber: 50,
+        columnNumber: 12
     }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
@@ -26645,7 +26645,7 @@ const Body = ()=>{
                             }, void 0, false, {
                                 fileName: "src/components/body.js",
                                 lineNumber: 57,
-                                columnNumber: 21
+                                columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                 className: "p-2 m-4 bg-green-200 rounded-lg",
@@ -26658,14 +26658,14 @@ const Body = ()=>{
                                 children: "search"
                             }, void 0, false, {
                                 fileName: "src/components/body.js",
-                                lineNumber: 60,
-                                columnNumber: 21
+                                lineNumber: 65,
+                                columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/body.js",
                         lineNumber: 56,
-                        columnNumber: 17
+                        columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "m-4 p-4 flex items-center",
@@ -26678,19 +26678,19 @@ const Body = ()=>{
                             children: "Top rated restaurants"
                         }, void 0, false, {
                             fileName: "src/components/body.js",
-                            lineNumber: 71,
-                            columnNumber: 17
+                            lineNumber: 81,
+                            columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/body.js",
-                        lineNumber: 70,
-                        columnNumber: 17
+                        lineNumber: 80,
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/body.js",
                 lineNumber: 55,
-                columnNumber: 13
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "res-container flex flex-wrap",
@@ -26700,33 +26700,33 @@ const Body = ()=>{
                             resData: restaurant
                         }, void 0, false, {
                             fileName: "src/components/body.js",
-                            lineNumber: 84,
-                            columnNumber: 52
+                            lineNumber: 101,
+                            columnNumber: 15
                         }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
                             resData: restaurant
                         }, void 0, false, {
                             fileName: "src/components/body.js",
-                            lineNumber: 84,
-                            columnNumber: 99
+                            lineNumber: 103,
+                            columnNumber: 15
                         }, undefined)
                     }, restaurant.info.id, false, {
                         fileName: "src/components/body.js",
-                        lineNumber: 83,
-                        columnNumber: 20
+                        lineNumber: 96,
+                        columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/body.js",
-                lineNumber: 80,
-                columnNumber: 13
+                lineNumber: 94,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/body.js",
         lineNumber: 54,
-        columnNumber: 9
+        columnNumber: 5
     }, undefined);
 };
-_s(Body, "nzu4fr7d9jBuSUNuvqogdUWmH0U=", false, function() {
+_s(Body, "wR7MY4cxlVEzlcybk2lvCwRrEOM=", false, function() {
     return [
         (0, _useOnlineStatusDefault.default)
     ];
@@ -27141,7 +27141,7 @@ class UserClass extends (0, _reactDefault.default).Component {
         // API call
         const data = await fetch("https://api.github.com/users/SparshS1703");
         const json = await data.json();
-        console.log(json);
+        // console.log(json);
         this.setState({
             userInfo: json
         });
@@ -27216,7 +27216,7 @@ var _s = $RefreshSig$();
 const Error = ()=>{
     _s();
     const err = (0, _reactRouterDom.useRouteError)();
-    console.log(err);
+    // console.log(err);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -27307,11 +27307,11 @@ const RestaurantMenu = ()=>{
     // }
     const { name, cuisines, cloudinaryImageId, costForTwoMessage } = resInfo?.cards[2]?.card?.card?.info || {};
     const { itemCards } = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card || {};
-    console.log(resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card || {});
-    console.log("hello", resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
-    console.log(itemCards);
+    // console.log(resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card ||{} );
+    // console.log("hello",resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
+    // console.log(itemCards);
     const categoris = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=>c?.card?.card?.["@type"] == "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
-    console.log("cat", categoris);
+    // console.log("cat",categoris);
     return resInfo == null ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/RestaurantMenu.js",
         lineNumber: 42,
@@ -27389,18 +27389,18 @@ var _s = $RefreshSig$();
 const useRestaurantMenu = (resId)=>{
     _s();
     const [resInfo, setResInfo] = (0, _react.useState)(null);
-    console.log(resId);
+    // console.log(resId);
     (0, _react.useEffect)(()=>{
         fetchMenu();
     }, [
         resId
     ]);
-    console.log("hello");
+    // console.log("hello");
     const fetchMenu = async ()=>{
-        console.log("hiii");
+        // console.log("hiii");
         const data = await fetch((0, _constants.MENU_URL) + resId + "&catalog_qa=undefined&submitAction=ENTER");
         const json = await data.json();
-        console.log(json);
+        // console.log(json);
         setResInfo(json.data);
     };
     return resInfo;
@@ -27427,7 +27427,7 @@ var _react = require("react");
 var _itemList = require("./ItemList");
 var _itemListDefault = parcelHelpers.interopDefault(_itemList);
 const RestaurantCategory = ({ data, showItems, setShowIndex })=>{
-    console.log(data);
+    // console.log(data);
     // const [showItems,setShowItems]=useState(false);  ------if this is present then each item has its own state therefore it is uncontrolled component else controlled component if controolled by parent component   /// interview  
     const handleClick = ()=>{
         // setShowItems(!showItems);
@@ -27534,7 +27534,7 @@ var _cartSlice = require("../utils/cartSlice");
 var _s = $RefreshSig$();
 const ItemList = ({ items })=>{
     _s();
-    console.log("items=", items);
+    // console.log("items=",items);
     const dispatch = (0, _reactRedux.useDispatch)();
     const handleAddItem = (item)=>{
         dispatch((0, _cartSlice.addItem)(item));
@@ -27599,25 +27599,16 @@ const ItemList = ({ items })=>{
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "absolute",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                        className: "p-2 mx-18 bg-white shadow-2xl rounded-xl cursor-pointer",
-                                        onClick: ()=>handleAddItem(item),
-                                        children: "Add +"
-                                    }, void 0, false, {
-                                        fileName: "src/components/ItemList.js",
-                                        lineNumber: 31,
-                                        columnNumber: 21
-                                    }, undefined),
-                                    cartItems.length == 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                                        children: "Cart is Empty. Add items to Cart."
-                                    }, void 0, false, {
-                                        fileName: "src/components/ItemList.js",
-                                        lineNumber: 32,
-                                        columnNumber: 46
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    className: "p-2 mx-18 bg-white shadow-2xl rounded-xl cursor-pointer",
+                                    onClick: ()=>handleAddItem(item),
+                                    children: "Add +"
+                                }, void 0, false, {
+                                    fileName: "src/components/ItemList.js",
+                                    lineNumber: 31,
+                                    columnNumber: 21
+                                }, undefined)
+                            }, void 0, false, {
                                 fileName: "src/components/ItemList.js",
                                 lineNumber: 30,
                                 columnNumber: 21
